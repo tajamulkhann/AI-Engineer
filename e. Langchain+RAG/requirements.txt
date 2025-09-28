@@ -1,0 +1,18 @@
+pydantic
+python-dotenv # used to load environment variables from .env file
+langchain
+langchain-openai
+langchain-groq
+langchain-core
+langchain-community
+defusedxml 
+pypdf
+bs4
+arxiv
+pymupdf
+wikipedia
+langchain_huggingface
+sentence-transformers>=2.2.2
+faiss-cpu
+langchain_google_genai
+langchain_pinecone
