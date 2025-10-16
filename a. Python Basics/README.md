@@ -8,6 +8,7 @@
 | `conda activate env_name`                | Activate an environment                              |
 | `conda deactivate`                       | Deactivate current environment                       |
 | `conda install package_name`             | Install a package in the active environment          |
+| `conda install -r requirements.txt`      | Install requirements.txt                             |
 | `conda install -c channel package_name`  | Install package from specific channel (e.g., conda-forge) |
 | `conda update conda`                     | Update Conda itself                                  |
 | `conda update package_name`              | Update a specific package                            |
