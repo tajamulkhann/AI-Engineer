@@ -19,6 +19,8 @@
 | `conda env create -f environment.yml`    | Create environment from `.yml` file                  |
 | `conda clean --all`                      | Remove unused packages and cache                     |
 
+## Difference between -n and -p
+
 | Command                                    | Description                         | Environment Location     | Activation Command            |
 | ------------------------------------------ | ----------------------------------- | ------------------------ | ----------------------------- |
 | `conda create -n myenv python=3.11`        | Creates env with name `myenv`       | `~/anaconda3/envs/myenv` | `conda activate myenv`        |
