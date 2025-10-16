@@ -18,3 +18,8 @@
 | `conda env export > environment.yml`     | Export environment to `.yml` file                    |
 | `conda env create -f environment.yml`    | Create environment from `.yml` file                  |
 | `conda clean --all`                      | Remove unused packages and cache                     |
+
+| Command                                    | Description                         | Environment Location     | Activation Command            |
+| ------------------------------------------ | ----------------------------------- | ------------------------ | ----------------------------- |
+| `conda create -n myenv python=3.11`        | Creates env with name `myenv`       | `~/anaconda3/envs/myenv` | `conda activate myenv`        |
+| `conda create -p /path/to/env python=3.11` | Creates env at specific folder path | `/path/to/env`           | `conda activate /path/to/env` |
