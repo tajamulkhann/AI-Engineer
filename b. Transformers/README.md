@@ -1,4 +1,4 @@
-### Transformer
+## Transformer
 
 <img width="1340" height="759" alt="image" src="https://github.com/user-attachments/assets/3796da0e-e176-46d0-ab87-6a16b6d04215" />
 
@@ -12,7 +12,7 @@
  
 - Transformers are highly efficient at capturing long-range dependencies and have become the foundation of modern NLP Models like GPT, BERT etc.
 
-#### 🧠 Transformer Architecture — Simplified (For Interviews)
+### 🧠 Transformer Architecture — Simplified (For Interviews)
 
 **Step 1: Tokenize**
 
@@ -77,19 +77,9 @@ Repeat steps 4 to 7 for multiple layers (transformer blocks).
 Convert contextualized vectors back into words (called Unembedding).
 
 ✅ In short:
-Tokenize → Embed → Add Position → Apply Attention → Normalize → Feed Forward → Repeat → Decode
+*Tokenize → Embed → Add Position → Apply Attention → Normalize → Feed Forward → Repeat → Decode*
 
-#### Input → Output (flow)
-
-Tokenize → embed → add positional encodings
-
-Encoder: repeated self-attention + FF to produce encoded representations
-
-Decoder: masked self-attention → encoder–decoder attention → FF to produce logits
-
-Linear + softmax → output token probabilities → greedy/beam decode.
-
-#### Difference between Encoder and Decoder
+### Difference between Encoder and Decoder
 
 | Aspect          | **BERT**                 | **GPT**                        |
 | --------------- | ------------------------ | ------------------------------ |
