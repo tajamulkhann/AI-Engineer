@@ -1,8 +1,16 @@
 ### Transformer
 
-A neural architecture that uses self-attention to model relationships in sequences without recurrence.
-
 <img width="1340" height="759" alt="image" src="https://github.com/user-attachments/assets/3796da0e-e176-46d0-ab87-6a16b6d04215" />
+
+- A seq2seq deep learning architecture that uses self-attention instead of Recurrence (like LSTM, GRU) to model relationships in sequences.
+
+- It processes all tokens parallely (self-attention), allowing token to attend to each other.
+
+- It has two important parts
+    - Encoder converts teh input into context matrix (hidden representation of all tokens)
+    - Decoder generates output step by step while attending to entire context
+ 
+- Transformers are highly efficient at capturing long-range dependencies and have become the foundation of modern NLP Models like GPT, BERT etc.
 
 #### 🧠 Transformer Architecture — Simplified (For Interviews)
 
@@ -81,12 +89,14 @@ Decoder: masked self-attention → encoder–decoder attention → FF to produce
 
 Linear + softmax → output token probabilities → greedy/beam decode.
 
-#### # Recurrence (Old Models) vs Seq (Transformers)
+#### Difference between Encoder and Decoder
 
-| Aspect              | Recurrence (RNN/LSTM/GRU)                       | Seq (Transformer)                                  |
-|---------------------|-------------------------------------------------|---------------------------------------------------|
-| Processing          | Sequential (word by word, step by step)         | Parallel (all tokens processed at once)           |
-| Dependency Handling | Struggles with long-term dependencies           | Captures long-range dependencies via attention    |
-| Training Speed      | Slow (cannot parallelize easily)                | Fast (highly parallelizable on GPUs/TPUs)         |
-| Memory              | Remembers context through hidden states         | Remembers via self-attention across full sequence |
-| Bottleneck          | Vanishing/exploding gradients in long sequences | Computational cost of attention (quadratic in seq length) |
+| Aspect          | **BERT**                 | **GPT**                        |
+| --------------- | ------------------------ | ------------------------------ |
+| **Type**        | Encoder-only             | Decoder-only                   |
+| **Attention**   | Bidirectional            | Unidirectional (left-to-right) |
+| **Goal**        | Understand text          | Generate text                  |
+| **Training**    | Masked Language Modeling | Next Token Prediction          |
+| **Context Use** | Sees full context        | Uses past tokens only          |
+| **Use Case**    | NLP understanding tasks  | Text generation tasks          |
+
