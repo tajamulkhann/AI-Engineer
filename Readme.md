@@ -85,8 +85,7 @@ rag_chain = (
 ## 🔹 Visuals
 
 ### 1. High-Level LangChain + RAG Flow
-![LangChain + RAG Architecture](e.%Langchain+RAG/LLM+RAG.png)
-
+![LangChain + RAG Architecture](e.%20Langchain%2BRAG/LLM%2BRAG.png)
 ---
 
 ### 2. Basic RAG Pipeline
