@@ -43,6 +43,45 @@ db = VectorDB(
 db.add(data=[{"doc_id": 1, "text": "Sample document"}])
 ```
 
+### 3️⃣ Retrieval
+
+- User query is converted into embedding
+- Retrieve similar vectors from VectorDB using chosen index
+
+### 4️⃣ Augmented Generation (RAG Chain)
+```python
+from langchain.schema import RunnablePassthrough, StrOutputParser
+
+rag_chain = (
+    {"context": retriever | format_docs, "question": RunnablePassthrough()}
+    | prompt
+    | model
+    | StrOutputParser()
+)
+```
+
+### Process:
+
+1. Retriever: Fetch relevant vectors from VectorDB
+
+2. Format Docs: Prepare retrieved docs as context
+
+3. Prompt: Combine query + context for LLM
+
+4. Model: Generate context-aware response
+
+5. Output Parser: Extract clean string output
+
+### 🔹 Key Points
+
+- Index type depends on dataset size & retrieval speed
+
+- Embeddings can be OpenAI (text-embedding-3-large), Hugging Face (all-MiniLM-L6-v2, all-mpnet-base-v2), or custom
+
+- Each entry needs a unique ID + vector
+
+- VectorDB + embeddings = semantic search, RAG, recommendations
+
 ## 🔹 Visuals
 
 ### 1. High-Level LangChain + RAG Flow
