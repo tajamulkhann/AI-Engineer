@@ -1,0 +1,8 @@
+| 🔢 Type                             | ⚙️ Model Name            | 🧠 Dimension | ⚡ Best For                     | 💬 Description                                                                         |
+| :---------------------------------- | :----------------------- | :----------- | :----------------------------- | :------------------------------------------------------------------------------------- |
+| **🟦 OpenAI Embedding 3 Small**     | `text-embedding-3-small` | 1536         | Fast, low-cost tasks           | Great for lightweight similarity search & quick retrieval where speed matters.         |
+| **🟩 OpenAI Embedding 3 Large**     | `text-embedding-3-large` | 3072         | High accuracy, semantic search | Best for complex reasoning, search ranking, and nuanced context understanding.         |
+| **🟧 OpenAI Ada (v2)**              | `text-embedding-ada-002` | 1536         | General-purpose                | Earlier powerful model for semantic similarity, clustering, and RAG pipelines.         |
+| **🟪 Hugging Face - MiniLM**        | `all-MiniLM-L6-v2`       | 384          | Lightweight, local inference   | Great tradeoff of speed and accuracy, runs easily on CPU for sentence similarity.      |
+| **🟨 Hugging Face - MPNet**         | `all-mpnet-base-v2`      | 768          | High-quality embeddings        | Excellent for semantic search, QA, and contextual matching.                            |
+| **🟥 Hugging Face - Instructor XL** | `hkunlp/instructor-xl`   | 768          | Task-aware embeddings          | Allows prompts like “Represent this document for classification,” improving relevance. |
