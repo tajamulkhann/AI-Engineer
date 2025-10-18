@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/7283af28-4ba3-46d5-913c-8d1c42f29465" />## Document Loading & Text Splitting
+## Document Loading & Text Splitting
 
 ```python
 # Load PDF or Text files
@@ -36,7 +36,7 @@ print(f"Chunks after character split: {len(char_docs)}")
 
 Use recursive splitter for better chunking of complex or structured documents.
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5b7c511e-1227-4f72-8a3a-308a7981063e" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/7283af28-4ba3-46d5-913c-8d1c42f29465" />
 
 
 
