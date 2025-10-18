@@ -30,9 +30,9 @@ print(f"Chunks after character split: {len(char_docs)}")
 
 ### Notes
 
-- RecursiveCharacterTextSplitter: Splits text recursively using multiple separators (\n\n, \n, space, etc.) to create more balanced chunks.
+- Recursive Character Text Splitter: It splits text hierarchically. First, it tries to split by paragraphs. If a paragraph is too long, it splits by sentences. If a sentence is still too long, it splits by words. It preserves whole words and avoids cutting text mid-word.
 
-- CharacterTextSplitter: Splits text only by a single separator (like \n) without recursive fallback.
+- Regular Text Splitter (like CharacterTextSplitter): It splits text purely based on character count, ignoring paragraphs, sentences, or word boundaries. This can result in cutting a word in half.
 
 Use recursive splitter for better chunking of complex or structured documents.
 
