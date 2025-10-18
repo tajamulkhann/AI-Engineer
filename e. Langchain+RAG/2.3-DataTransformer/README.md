@@ -35,3 +35,6 @@ print(f"Chunks after character split: {len(char_docs)}")
 - CharacterTextSplitter: Splits text only by a single separator (like \n) without recursive fallback.
 
 Use recursive splitter for better chunking of complex or structured documents.
+
+![Uploading image.png…]()
+
