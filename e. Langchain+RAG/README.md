@@ -22,7 +22,6 @@ It helps LLMs answer queries using **external knowledge**, instead of relying on
 | **Flat**   | Linear scan of all vectors | Small datasets, exact search |
 | **HNSW**   | Hierarchical Navigable Small World graph | Fast approximate search for large datasets |
 | **IVF**    | Inverted File + clustering | Approximate search, huge datasets |
-| **PQ**     | Product Quantization | Memory-efficient, approximate search |
 
 #### VectorDB Example
 ```python
