@@ -99,5 +99,3 @@ rag_chain = (
 - ✅ Allows **domain-specific knowledge** injection  
 - ✅ Scales with custom/private datasets  
 - ✅ Provides explainability (retrieved sources)
-
----
