@@ -42,7 +42,7 @@ db = VectorDB(
 
 # Add vectors
 db.add(data=[{"doc_id": 1, "text": "Sample document"}])
-
+```
 
 ## 🔹 Visuals
 
