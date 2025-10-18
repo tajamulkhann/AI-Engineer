@@ -2,30 +2,47 @@
 
 ## 🔹 What is RAG?
 RAG combines **retrieval** (from a knowledge base/vector DB) with **generation** (using an LLM).  
-It helps LLMs answer queries using **external knowledge** instead of relying only on their training data.
+It helps LLMs answer queries using **external knowledge**, instead of relying only on their training data.
 
 ---
 
 ## 🔹 LangChain + RAG Workflow
 
-1. **Data Ingestion**  
-   - Load documents (PDFs, CSVs, text, etc.)  
-   - Split into smaller chunks  
+### 1️⃣ Data Ingestion
+- Load documents (PDFs, CSVs, text, etc.)  
+- Split into smaller chunks using `RecursiveCharacterTextSplitter` or similar  
 
-2. **Embedding & Storage**  
-   - Convert text chunks into vector embeddings  
-   - Store in a **Vector Database** (FAISS, Pinecone, Weaviate, etc.)  
+### 2️⃣ Embedding & Storage
+- Convert text chunks into **vector embeddings** (OpenAI, Hugging Face, or custom models)  
+- Store in a **Vector Database** (FAISS, Pinecone, Weaviate, etc.)  
 
-3. **Retrieval**  
-   - User query is embedded  
-   - Similar embeddings retrieved from vector DB  
+#### Index Types
+| Index Type | Description | Use Case |
+|------------|-------------|----------|
+| **Flat**   | Linear scan of all vectors | Small datasets, exact search |
+| **HNSW**   | Hierarchical Navigable Small World graph | Fast approximate search for large datasets |
+| **IVF**    | Inverted File + clustering | Approximate search, huge datasets |
+| **PQ**     | Product Quantization | Memory-efficient, approximate search |
 
-4. **Augmented Generation**  
-   - Combine **Query + Retrieved Context**  
-   - Pass to LLM (via LangChain prompt templates)  
-   - LLM generates context-aware response  
+#### VectorDB Example
+```python
+from vectordb import VectorDB
+from embeddings import OpenAIEmbeddings
 
----
+# Initialize embeddings
+embed_model = OpenAIEmbeddings(model="text-embedding-3-large")
+
+# Create vector DB
+db = VectorDB(
+    embedding_model=embed_model,
+    index_type="HNSW",
+    dimension=1536,
+    id_key="doc_id"
+)
+
+# Add vectors
+db.add(data=[{"doc_id": 1, "text": "Sample document"}])
+
 
 ## 🔹 Visuals
 
