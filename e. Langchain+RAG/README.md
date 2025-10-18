@@ -48,6 +48,14 @@ db.add(data=[{"doc_id": 1, "text": "Sample document"}])
 - User query is converted into embedding
 - Retrieve similar vectors from VectorDB using chosen index
 
+```python
+retriever=vector_store.as_retriever(
+    search_kwargs={"k": 10} #hyperparameter
+)
+retriever.invoke("what is llama model?")
+
+```
+
 ### 4️⃣ Augmented Generation (RAG Chain)
 ```python
 from langchain.schema import RunnablePassthrough, StrOutputParser
