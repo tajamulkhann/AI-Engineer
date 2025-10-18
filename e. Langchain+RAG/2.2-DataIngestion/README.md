@@ -1,0 +1,11 @@
+## Data Ingestion
+
+Loader Name                         |  Import Statement                                                           |  Use Case                                             |  Example                                                                                          
+------------------------------------+-----------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------
+TextLoader                          |  from langchain_community.document_loaders.text import TextLoader           |  Load text files (.txt)                               |  loader = TextLoader('speech.txt')                                                                
+PyPDFLoader                         |  from langchain_community.document_loaders import PyPDFLoader               |  Load PDF files with page-wise extraction             |  loader = PyPDFLoader('syllabus.pdf')                                                             
+WebBaseLoader                       |  from langchain_community.document_loaders import WebBaseLoader             |  Web scraping from URLs                               |  loader = WebBaseLoader(web_paths=['https://topmate.io/tajamulkhan'])                             
+WebBaseLoader (with BeautifulSoup)  |  from langchain_community.document_loaders import WebBaseLoader
+import bs4  |  Web scraping specific HTML elements (h3, div, etc.)  |  loader = WebBaseLoader(web_paths=['...'], bs_kwargs=dict(parse_only=bs4.SoupStrainer(name='h3')))
+ArxivLoader                         |  from langchain_community.document_loaders import ArxivLoader               |  Load research papers from arXiv                      |  docs = ArxivLoader(query='1706.03762', load_max_docs=2).load()                                   
+WikiLoader                          |  Not shown in notebook (mentioned in markdown)                              |  Load Wikipedia articles                              |  Not implemented in notebook                                                                      
