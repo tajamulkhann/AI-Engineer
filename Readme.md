@@ -52,9 +52,9 @@ db.add(data=[{"doc_id": 1, "text": "Sample document"}])
 retriever=vector_store.as_retriever(
     search_kwargs={"k": 10} #hyperparameter
 )
-'''
-
 retriever.invoke("what is llama model?")
+
+```
 
 ### 4️⃣ Augmented Generation (RAG Chain)
 ```python
