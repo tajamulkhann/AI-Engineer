@@ -89,7 +89,7 @@ rag_chain = (
 ---
 
 ### 2. Basic RAG Pipeline
-![RAG Pipeline](RAGPipeline.png)
+![RAG Pipeline](e.%20Langchain%2BRAG/RAGPipeline.png)
 
 ---
 
