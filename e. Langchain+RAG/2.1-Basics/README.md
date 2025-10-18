@@ -1,3 +1,5 @@
+## Langchain Basic
+
 | **Step** | **Purpose** | **Code** |
 |-----------|--------------|-----------|
 | **1️⃣ Setup** | Load env vars & enable tracing | `from dotenv import load_dotenv; import os`<br>`load_dotenv()`<br>`os.environ['LANGCHAIN_TRACING_V2'] = 'true'` |
